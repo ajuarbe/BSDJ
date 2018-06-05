@@ -33,6 +33,7 @@ app.get('companies/new', (req, res) => {
   res.render('newCompany', { });
 });
 
+
 app.listen(port, () => {
   console.log(`Listening on port ${port}...`);
 });
