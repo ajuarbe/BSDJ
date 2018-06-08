@@ -1,15 +1,27 @@
 <% include partials/header %>
-<h1>This is the Companies Page.</h1>
+<div class='container'>
+<header class='jumbotron'>
+<div>
+  <h1>Boston's Software Employers</h1>
+  <p>Following is a list of the top 100 employers of software developers in the Boston area.</p>
+  <a href='/companies/new' class='btn btn-primary btn-large'>Add New Company</a>
+</div>
+</header>
 <% for(let i = 0; i < companies.length; i++) { %>
 
- <div>
- <h4>
- <%= companies[i].name %>
- </h4>
- <img src='<%= companies[i].image %>' width='150px'>
- </div>
+ <div class='card'>
+  <div class='card-header'>
+    <h4>
+    <%= companies[i].name %>
+    </h4>
+  </div>
+  <div class='card-body'>
+    <img  src='<%= companies[i].image %>' width='150px'>
+  </div>
+  <% } %>
+  </div>
+</div>
 
-<% } %>
 <footer>
 <% include partials/footer %>
 </footer>
