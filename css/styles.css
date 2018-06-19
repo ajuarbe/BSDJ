@@ -2,3 +2,23 @@ hr {
   width: 80%;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+img {
+  width: 200px;
+}
+
+.bsjd {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.trademark {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}

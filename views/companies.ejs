@@ -1,27 +1,26 @@
 <% include partials/header %>
+<% include partials/navigation %>
 <div class='container'>
-<header class='jumbotron'>
-<div>
-  <h1>Boston's Software Employers</h1>
-  <p>Following is a list of the top 100 employers of software developers in the Boston area.</p>
-  <a href='/companies/new' class='btn btn-primary btn-large'>Add New Company</a>
+  <header class='jumbotron'>
+    <div class='container'>
+      <h1>Boston's Software Employers</h1>
+      <p>Following is a list of the top 100 employers of software developers in the Boston area.</p>
+      <a href='/companies/new' class='btn btn-primary btn-large'>Add New Company</a>
+    </div>
+  </header>
+  <div class='row'>
+      <% for(let i = 0; i < companies.length; i++) { %>
+    <div class='col-md-3 col-sm-6'>
+      <div class='thumbnail'>
+        <img  src='<%= companies[i].image %>'>
+      </div>
+      <div class='caption'>
+        <%= companies[i].name %>
+      </div>
+    </div>
+    <% } %>
+  </div>
 </div>
-</header>
-<% for(let i = 0; i < companies.length; i++) { %>
-
- <div class='card'>
-  <div class='card-header'>
-    <h4>
-    <%= companies[i].name %>
-    </h4>
-  </div>
-  <div class='card-body'>
-    <img  src='<%= companies[i].image %>' width='150px'>
-  </div>
-  <% } %>
-  </div>
-</div>
-
 <footer>
 <% include partials/footer %>
 </footer>

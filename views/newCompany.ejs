@@ -1,8 +1,11 @@
 <% include partials/header %>
+<% include partials/navigation %>
+<div class='container form-group'>
 <h1>Create a new company</h1>
-<form action='/companies' method='POST'>
-  <input placeholder="Company Name..." name="name">
-  <input placeholder="Logo URL..." name="image">
-  <button type="submit">Submit</button>
-</form>
+  <form action='/companies' method='POST'>
+    <input placeholder="Company Name..." name="name">
+    <input placeholder="Logo URL..." name="image">
+    <button type="submit" class='btn btn-lg btn-default'>Submit</button>
+  </form>
+</div>
 <% include partials/footer %>
